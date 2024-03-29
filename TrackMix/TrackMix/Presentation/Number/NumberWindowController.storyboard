@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="yki-Ll-7Qs">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="EAt-Gi-7Zs">
+            <objects>
+                <windowController storyboardIdentifier="NumberWindowController" id="yki-Ll-7Qs" customClass="NumberWindowController" customModule="TrackMix" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" identifier="NumberWindow" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Kd4-Tt-PWW" customClass="NumberWindow" customModule="TrackMix" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
+                        <view key="contentView" id="iFG-ct-Zte">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="yki-Ll-7Qs" id="qCX-q9-4NW"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="wpe-Cn-gKk" kind="relationship" relationship="window.shadowedContentViewController" id="J9f-Nb-LRV"/>
+                    </connections>
+                </windowController>
+                <customObject id="t9z-To-enl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="-370"/>
+        </scene>
+        <!--Number View Controller-->
+        <scene sceneID="vC2-bV-UxI">
+            <objects>
+                <viewController storyboardIdentifier="NumberViewController" id="wpe-Cn-gKk" customClass="NumberViewController" customModule="TrackMix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="iCl-Ek-HCy" customClass="KeyEventView" customModule="TrackMix" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="313"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jb9-RB-Ova">
+                                <rect key="frame" x="224" y="129" width="33" height="56"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="3" id="aq9-Rx-uYc">
+                                    <font key="font" metaFont="system" size="48"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Jb9-RB-Ova" firstAttribute="centerX" secondItem="iCl-Ek-HCy" secondAttribute="centerX" id="5NA-f0-ISD"/>
+                            <constraint firstItem="Jb9-RB-Ova" firstAttribute="centerY" secondItem="iCl-Ek-HCy" secondAttribute="centerY" id="Ziv-mu-8O6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="Jb9-RB-Ova" id="jXb-de-YfO"/>
+                    </connections>
+                </viewController>
+                <customObject id="GWV-7b-MXo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="68.5"/>
+        </scene>
+    </scenes>
+</document>
